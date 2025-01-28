@@ -1,0 +1,1 @@
+Only one change will need to be made in REXX BASEBALL V3.1. Line 3 "ISPEXEC LIBDEF ISPPLIB DATASET ID('HLQ.YOUR.ISPPLIB')". Make it is your ISPPLIB. You will need to just FTP REXX BASEBALL V3.1.txt file to a member in your REXX Library. Then FTP all the other text files here into your ISPPLIB as individual members. Have fun!
