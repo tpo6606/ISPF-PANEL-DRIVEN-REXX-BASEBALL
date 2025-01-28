@@ -1,0 +1,37 @@
+)ATTR
+% TYPE(TEXT) INTENS(LOW) COLOR(TURQUOISE)
++ TYPE(TEXT) INTENS(LOW) COLOR(GREEN) SKIP(ON)
+! TYPE(TEXT) INTENS(HIGH) COLOR(WHITE)
+^ TYPE(INPUT) INTENS(LOW) COLOR(RED) CAPS(ON)
+_ TYPE(INPUT) INTENS(LOW) COLOR(RED) CAPS(ON)
+$ TYPE(OUTPUT) INTENS(LOW) COLOR(TURQUOISE) CAPS(OFF)
+# TYPE(OUTPUT) INTENS(LOW) COLOR(GREEN) CAPS(OFF)
+@ TYPE(OUTPUT) INTENS(HIGH) COLOR(WHITE) CAPS(OFF)
+)BODY
+%--------------------------- BASEBALL GAME -------------------------------
++  $Z                  +#Z               #Z           $Z
++                       @Z               @Z           $Z
++                       +B= @Z +S= @Z +OUTS= @Z
++         @Z
++ INNING: #Z
++         @Z
++
++     X           #Z
++  +/  +\         #Z
++  X     X        #Z
++  +\  +/         #Z
++     V
++
+! WELCOME TO REXX BASEBALL!
++ PRESS ENTER . .^ENTER
++
++ EXIT=END
+)INIT
+ .ZVARS = '(GM AW HM LG AWS HMS SP B ST OTS C I D LGN TODY SPON PLBLL)'
+ .CURSOR = ENTER
+)PROC
+  IF (.RESP = END)
+    &EXIT1 = .RESP
+
+
+)END

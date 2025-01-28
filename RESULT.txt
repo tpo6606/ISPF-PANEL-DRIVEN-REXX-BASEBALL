@@ -1,0 +1,36 @@
+)ATTR
+% TYPE(TEXT) INTENS(LOW) COLOR(TURQUOISE)
++ TYPE(TEXT) INTENS(LOW) COLOR(GREEN) SKIP(ON)
+! TYPE(TEXT) INTENS(HIGH) COLOR(WHITE)
+^ TYPE(INPUT) INTENS(LOW) COLOR(RED) CAPS(ON)
+_ TYPE(INPUT) INTENS(LOW) COLOR(RED) CAPS(ON)
+$ TYPE(OUTPUT) INTENS(LOW) COLOR(TURQUOISE) CAPS(OFF)
+# TYPE(OUTPUT) INTENS(LOW) COLOR(GREEN) CAPS(OFF)
+@ TYPE(OUTPUT) INTENS(HIGH) COLOR(WHITE) CAPS(OFF)
+)BODY
+%--------------------------- BASEBALL GAME -------------------------------
++  $Z                  +#Z               #Z           $Z
++                       @Z               @Z           $Z
++                       +B= @Z +S= @Z +OUTS= @Z
++         @Z
++ INNING: #Z
++         @Z
++
++    @Z                +RESULT:
++  +/  +\              @PIT1
++ @Z    @Z             @RES1
++  +\  +/              @RES2
++    @Z                @RES3
++
+! ACTION PERFORMED
++ PRESS ENTER . .^ENTER
++
++ EXIT=END
+)INIT
+ .ZVARS = '(GM AW HM LG AWS HMS SP B ST OTS C I D B2 B3 B1 B4)'
+ .CURSOR = ENTER
+)PROC
+  IF (.RESP = END)
+    &EXIT1 = .RESP
+
+)END

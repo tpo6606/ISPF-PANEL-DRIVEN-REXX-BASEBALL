@@ -1,0 +1,42 @@
+)ATTR
+% TYPE(TEXT) INTENS(LOW) COLOR(TURQUOISE)
++ TYPE(TEXT) INTENS(LOW) COLOR(GREEN) SKIP(ON)
+! TYPE(TEXT) INTENS(HIGH) COLOR(WHITE)
+^ TYPE(INPUT) INTENS(LOW) COLOR(RED) CAPS(ON)
+_ TYPE(INPUT) INTENS(LOW) COLOR(RED) CAPS(ON) PAD(_)
+$ TYPE(OUTPUT) INTENS(LOW) COLOR(TURQUOISE) CAPS(OFF)
+# TYPE(OUTPUT) INTENS(LOW) COLOR(GREEN) CAPS(OFF)
+@ TYPE(OUTPUT) INTENS(HIGH) COLOR(WHITE) CAPS(OFF)
+)BODY
+%--------------------------- BASEBALL GAME -------------------------------
++  $Z                  +#Z               #Z           $Z
++                       @Z               @Z           $Z
++                       +B= @Z +S= @Z +OUTS= @Z
++         @Z
++ INNING: #Z
++         @Z
++
++    @Z                                    +%THE BATTER PICKED UP -
++  +/  +\                                  +%PITCH SPEED: @Z
++ @Z    @Z                                 +%PITCH TYPE: @Z
++  +\  +/                                  +%PITCH LOCATION: @Z
++    @Z
++             + @OFTP
+! BATTER                                + @SLCT
++ SWING OPTION . ._S +
++ SELECT GUESS PITCH: +FB = !1 +CB = !2 +SL = !3 +CH = !4
++ APPEND GUESS LOCATION: +RIGHT = !R +LEFT = !L +DOWN = !D +UP = !U
++ PRESS ENTER WITH NO VALUE TO TAKE PITCH
++
++ EXIT=END
+)INIT
+ .ZVARS = '(GM AW HM LG AWS HMS SP B ST OTS C I D B2 HC B3 B1 HP HL B4)'
+ .CURSOR = S
+)PROC
+  IF (.RESP = END)
+    &EXIT1 = .RESP
+
+VER(&P,LIST,1R,1L,1D,1U,2R,2L,2D,2U,3R,3L,3D,3U,4R,4L,4D,4U,P,LEAVE)
+VER(&S,LIST,1R,1L,1D,1U,2R,2L,2D,2U,3R,3L,3D,3U,4R,4L,4D,4U, ,LEAVE)
+
+)END
