@@ -771,6 +771,7 @@ B2 = 'X'
 B3 = 'X'
 B4 = 'V'
 Do while O > 0
+if  I >= inset & hms > aws then signal ENDGAME
 pit1 = ''
 pit2 = ''
 swing3 = ''
